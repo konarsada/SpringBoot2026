@@ -8,10 +8,10 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class SpringBoot2026Application {
 
 	public static void main(String[] args) {
-//		SpringApplication.run(SpringBoot2026Application.class, args);
+		SpringApplication.run(SpringBoot2026Application.class, args);
 
-		ConfigurableApplicationContext context = SpringApplication.run(SpringBoot2026Application.class, args);
-		context.close();
+//		ConfigurableApplicationContext context = SpringApplication.run(SpringBoot2026Application.class, args);
+//		context.close();
 
 	}
 
