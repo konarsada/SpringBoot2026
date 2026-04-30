@@ -32,9 +32,9 @@ public class TestController3 {
                 + " and user5 hashcode " + user5.hashCode());
     }
 
-    @GetMapping(path = "/fetchUser2_1")
+    @GetMapping(path = "/fetchUser3")
     public ResponseEntity<String> getUserDetails() {
-        System.out.println("fetchUser api invoked");
+        System.out.println("fetchUser3 api invoked");
         return ResponseEntity.status(HttpStatus.OK).body("Hello World");
     }
 }

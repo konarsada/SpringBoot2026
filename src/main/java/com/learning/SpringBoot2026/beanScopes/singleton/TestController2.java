@@ -28,9 +28,9 @@ public class TestController2 {
                 + " and user4 hashcode " + user4.hashCode());
     }
 
-    @GetMapping(path = "/fetchUser1_2")
+    @GetMapping(path = "/fetchUser_2")
     public ResponseEntity<String> getUserDetails() {
-        System.out.println("fetchUser2 api invoked");
+        System.out.println("fetchUser_2 api invoked");
         return ResponseEntity.status(HttpStatus.OK).body("");
     }
 }

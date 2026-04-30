@@ -1,8 +1,7 @@
-package com.learning.SpringBoot2026.beanScopes.singleton;
+package com.learning.SpringBoot2026.beanScopes.request;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,26 +10,26 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@Scope("singleton")
 @RequestMapping(value = "/api")
-@Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
-public class TestController1 {
+public class TestController5 {
 
     @Autowired
-    User4 user4;
+    User7 user7;
 
-    public TestController1() {
-        System.out.println("TestController1 Initialization");
+    public TestController5() {
+        System.out.println("TestController5 instance created");
     }
 
     @PostConstruct
     public void init() {
-        System.out.println("PostConstruct in TestController1 object hashcode " + this.hashCode()
-            + " and user4 hashcode " + user4.hashCode());
+        System.out.println("TestController5 object hashcode " + this.hashCode()
+                + " with user7 hashcode " + user7.hashCode());
     }
 
-    @GetMapping(path = "/fetchUser_1")
+    @GetMapping(path = "/fetchUser5")
     public ResponseEntity<String> getUserDetails() {
-        System.out.println("fetchUser_1 api invoked");
+        System.out.println("fetchUser5 api invoked");
         return ResponseEntity.status(HttpStatus.OK).body("");
     }
 }

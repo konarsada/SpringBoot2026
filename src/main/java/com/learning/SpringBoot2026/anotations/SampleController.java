@@ -13,7 +13,7 @@ public class SampleController {
         binder.registerCustomEditor(String.class, "firstName2", new FirstNamePropertyEditor());
     }
 
-    @GetMapping(path = "/fetchUser")
+    @GetMapping(path = "/fetchUser1")
     public String getUserDetails(
             @RequestParam(value = "firstName") String firstName,
             @RequestParam(name = "lastName", required = false) String lastName,
