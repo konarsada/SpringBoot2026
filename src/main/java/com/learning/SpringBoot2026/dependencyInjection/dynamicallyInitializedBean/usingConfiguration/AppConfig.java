@@ -9,7 +9,9 @@ public class AppConfig {
 
     @Bean
 //    public Order5 createOrderBean(@Value("${false}") boolean isOnlineOrder) {
+//    public Order5 createOrderBean(@Value("${isOnlineOrder}") boolean isOnlineOrderzz) {
     public Order5 createOrderBean(@Value("${isOnlineOrder}") boolean isOnlineOrder) {
+//        if (isOnlineOrderzz) {
         if (isOnlineOrder) {
             return new OnlineOrder2();
         } else {
